@@ -16,6 +16,8 @@ import { LoginComponent } from './components/authentification/login/login.compon
 import { SignupComponent } from './components/authentification/signup/signup.component';
 import { WelcomeComponent } from './components/home/welcome/welcome.component';
 import { DemoflexComponent } from './components/demo/demoflex/demoflex.component';
+import { HeaderComponent } from './components/navigation/header/header.component';
+import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
 
 
 
@@ -26,7 +28,9 @@ import { DemoflexComponent } from './components/demo/demoflex/demoflex.component
     LoginComponent,
     SignupComponent,
     WelcomeComponent,
-    DemoflexComponent
+    DemoflexComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
