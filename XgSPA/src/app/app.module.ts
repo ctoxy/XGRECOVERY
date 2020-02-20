@@ -39,7 +39,8 @@ import { StopTrainingComponent } from './components/training/current-training/st
     TrainingComponent,
     CurrentTrainingComponent,
     PastTrainingsComponent,
-    NewTrainingComponent
+    NewTrainingComponent,
+    StopTrainingComponent
   ],
   imports: [
     BrowserModule,
