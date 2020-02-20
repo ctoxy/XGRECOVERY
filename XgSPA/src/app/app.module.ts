@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /*librairie */
 import { FlexLayoutModule } from '@angular/flex-layout';
 /*module*/
-import { MaterialModule } from '../module/material.module';
+import { MaterialModule } from './module/material.module';
 /*services*/
 import { AuthentificationService } from './_services/authentification/authentification.service';
 /*components*/
@@ -18,6 +18,11 @@ import { WelcomeComponent } from './components/home/welcome/welcome.component';
 import { DemoflexComponent } from './components/demo/demoflex/demoflex.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
+import { TrainingComponent } from './components/training/training/training.component';
+import { CurrentTrainingComponent } from './components/training/current-training/current-training.component';
+import { PastTrainingsComponent } from './components/training/past-trainings/past-trainings.component';
+import { NewTrainingComponent } from './components/training/new-training/new-training.component';
+import { StopTrainingComponent } from './components/training/current-training/stop-training.component';
 
 
 
@@ -30,7 +35,11 @@ import { SidenavListComponent } from './components/navigation/sidenav-list/siden
     WelcomeComponent,
     DemoflexComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    TrainingComponent,
+    CurrentTrainingComponent,
+    PastTrainingsComponent,
+    NewTrainingComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +51,8 @@ import { SidenavListComponent } from './components/navigation/sidenav-list/siden
     ReactiveFormsModule
   ],
   providers: [AuthentificationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  entryComponents: [StopTrainingComponent]
 })
 export class AppModule { }
