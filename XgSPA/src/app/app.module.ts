@@ -26,6 +26,19 @@ import { NewTrainingComponent } from './components/training/new-training/new-tra
 import { StopTrainingComponent } from './components/training/current-training/stop-training.component';
 import { ValueComponent } from './components/value/value.component';
 
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MainDashComponent } from './components/tableau/main-dash/main-dash.component';
+import { CarteComponent } from './components/tableau/carte/carte.component';
+import { ExampleTableComponent } from './components/tableau/example-table/example-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+
 
 
 
@@ -43,7 +56,11 @@ import { ValueComponent } from './components/value/value.component';
     PastTrainingsComponent,
     NewTrainingComponent,
     StopTrainingComponent,
-    ValueComponent
+    ValueComponent,
+    MainDashComponent,
+    CarteComponent,
+    ExampleTableComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -53,7 +70,16 @@ import { ValueComponent } from './components/value/value.component';
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [AuthentificationService],
   bootstrap: [AppComponent],

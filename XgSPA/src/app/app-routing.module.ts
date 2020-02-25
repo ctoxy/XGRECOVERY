@@ -6,6 +6,7 @@ import { LoginComponent } from './components/authentification/login/login.compon
 import { DemoflexComponent } from './components/demo/demoflex/demoflex.component';
 import { TrainingComponent } from './components/training/training/training.component';
 import { ValueComponent } from './components/value/value.component';
+import { CarteComponent } from './components/tableau/carte/carte.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'training', component: TrainingComponent },
   { path: 'demoflex', component: DemoflexComponent },
   { path: 'values', component: ValueComponent },
+  { path: 'carte', component: CarteComponent },
 
 ];
 

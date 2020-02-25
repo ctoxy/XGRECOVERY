@@ -31,3 +31,9 @@ MySqlValueGenerationStrategy.IdentityColumn)
 spa
 
 flexlayout https://github.com/angular/flex-layout
+
+
+cote front creation dashboard 
+ ng generate @angular/material:material-dashboard  components/tableau/main-dash
+ ng generate @angular/material:material-table components/tableau/example-table
+ 

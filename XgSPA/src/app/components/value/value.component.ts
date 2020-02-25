@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CarteService } from 'src/app/_services/carte.service';
 
 @Component({
   selector: 'app-value',
@@ -9,19 +10,16 @@ import { HttpClient } from '@angular/common/http';
 export class ValueComponent implements OnInit {
   values: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private carteService: CarteService) { }
 
   ngOnInit() {
     this.getValues();
+    console.log(this.getValues());
+
   }
 
   getValues() {
-    this.http.get('http://localhost:5000/api/values').subscribe(response => {
-      this.values = response;
-    }, error => {
-      console.log(error);
-
-    })
+    this.values = this.carteService.getValues();
   }
 
 }
