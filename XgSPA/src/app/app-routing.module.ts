@@ -5,6 +5,7 @@ import { SignupComponent } from './components/authentification/signup/signup.com
 import { LoginComponent } from './components/authentification/login/login.component';
 import { DemoflexComponent } from './components/demo/demoflex/demoflex.component';
 import { TrainingComponent } from './components/training/training/training.component';
+import { ValueComponent } from './components/value/value.component';
 
 
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'training', component: TrainingComponent },
   { path: 'demoflex', component: DemoflexComponent },
+  { path: 'values', component: ValueComponent },
 
 ];
 

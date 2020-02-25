@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /*librairie */
 import { FlexLayoutModule } from '@angular/flex-layout';
 /*module*/
+import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './module/material.module';
 /*services*/
 import { AuthentificationService } from './_services/authentification/authentification.service';
@@ -23,6 +24,7 @@ import { CurrentTrainingComponent } from './components/training/current-training
 import { PastTrainingsComponent } from './components/training/past-trainings/past-trainings.component';
 import { NewTrainingComponent } from './components/training/new-training/new-training.component';
 import { StopTrainingComponent } from './components/training/current-training/stop-training.component';
+import { ValueComponent } from './components/value/value.component';
 
 
 
@@ -40,7 +42,8 @@ import { StopTrainingComponent } from './components/training/current-training/st
     CurrentTrainingComponent,
     PastTrainingsComponent,
     NewTrainingComponent,
-    StopTrainingComponent
+    StopTrainingComponent,
+    ValueComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,7 @@ import { StopTrainingComponent } from './components/training/current-training/st
     FlexLayoutModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule
   ],
