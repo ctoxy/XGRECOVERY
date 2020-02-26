@@ -1,30 +1,40 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { ExampleTableDataSource, ExampleTableItem } from './example-table-datasource';
 
+import { Observable } from 'rxjs';
+import { DataSource } from '@angular/cdk/collections';
+import { Value } from '../../../model/value.model';
+import { CarteService } from 'src/app/_services/carte.service';
 @Component({
   selector: 'app-example-table',
   templateUrl: './example-table.component.html',
   styleUrls: ['./example-table.component.scss']
 })
-export class ExampleTableComponent implements AfterViewInit, OnInit {
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatTable, {static: false}) table: MatTable<ExampleTableItem>;
-  dataSource: ExampleTableDataSource;
+
+
+
+export class ExampleTableComponent implements  OnInit {
+
+  dataSource =  new ValueDataSource(this.carteService);
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name'];
-
+  constructor(private carteService: CarteService) {}
   ngOnInit() {
-    this.dataSource = new ExampleTableDataSource();
+
   }
 
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
+
+}
+
+export class ValueDataSource extends DataSource<any> {
+  constructor(private carteService: CarteService) {
+    super();
   }
+
+  connect(): Observable<Value[]>{
+    return this.carteService.getValues();
+  }
+
+  disconnect() {}
+
 }

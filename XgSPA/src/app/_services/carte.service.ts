@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Value } from '../model/value.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class CarteService {
   constructor(private http: HttpClient) { }
 
   // tslint:disable-next-line: ban-types
-  getValues(): Observable<Object> {
-    return this.http.get(this.baseUrl);
+  getValues(): Observable<Value[]> {
+    return this.http.get<Value[]>(this.baseUrl);
   }
 }
