@@ -11,8 +11,9 @@ import { CarteService } from 'src/app/_services/carte.service';
 })
 export class ValueTableComponent implements OnInit {
 
-  displayedColumns: string[] = ['SESSION_ID', 'CLS', 'ROLLNO', 'STD_NM', 'FATH_NM', 'PERCENT'];
-  dataSource: MatTableDataSource<any>;
+  displayedColumns: string[] = ['id', 'name', 'SESSION_ID', 'CLS', 'ROLLNO', 'STD_NM', 'FATH_NM', 'PERCENT'];
+  // dataSource: MatTableDataSource<any>;
+  dataSource = new MatTableDataSource();
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -22,12 +23,13 @@ export class ValueTableComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataSource = new MatTableDataSource(this.carteService.getData());
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-    console.log('ced', this.dataSource);
-
-
+    /*this.dataSource = new MatTableDataSource(this.carteService.getData());*/
+    return this.carteService.getValues().subscribe(res => {
+      this.dataSource.data = res;
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+      console.log('ced', this.dataSource.data);
+    });
   }
 
   applyFilter(event: Event) {
