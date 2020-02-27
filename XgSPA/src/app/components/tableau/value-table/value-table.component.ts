@@ -17,6 +17,8 @@ export class ValueTableComponent implements OnInit {
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
+  /*for adding color to the row */
+  selectedRow: boolean;
 
   constructor(private carteService: CarteService) {
 
@@ -40,5 +42,18 @@ export class ValueTableComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+  /*ajout de selection de la row en surbrillance*/
+  onRowClicked(row) {
+
+    if(!this.selectedRow)
+    {
+      this.selectedRow = row;
+    }
+    else
+    {
+      this.selectedRow = row;
+    }
+
+ }
 }
 
