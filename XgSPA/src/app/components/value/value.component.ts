@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CarteService } from 'src/app/_services/carte.service';
+import { CarteService } from 'src/app/_services/carte/carte.service';
 
 @Component({
   selector: 'app-value',

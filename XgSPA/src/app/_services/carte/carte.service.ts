@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Value } from '../model/value.model';
+import { Value } from '../../model/value.model';
 import { STUDENTS } from './mock.data';
 import { catchError, map, tap} from 'rxjs/operators';
 
@@ -11,7 +11,7 @@ import { catchError, map, tap} from 'rxjs/operators';
 export class CarteService {
   baseUrl = 'http://localhost:5000/api/values/';
   private values: Value[] = [];
-  //students = STUDENTS['0']['data'];
+  // students = STUDENTS['0']['data'];
   constructor(private http: HttpClient) { }
 
   // tslint:disable-next-line: ban-types
