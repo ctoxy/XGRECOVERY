@@ -1,1 +1,27 @@
-<p>shopping-edit works!</p>
+<section >
+  <form fxLayout="row" fxLayoutGap="10px">
+    <mat-form-field>
+      <input
+        type="Name"
+        matInput
+        placeholder="name"
+        >
+      <mat-hint>Please enter a valid name.</mat-hint>
+      <mat-error>Invalid or missing email.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="number"
+        matInput
+        placeholder="amount"
+       >
+      <mat-hint>Please enter your amount.</mat-hint>
+      <mat-error>Missing password.</mat-error>
+    </mat-form-field>
+  </form>
+  <div fxLayout="row" fxLayoutGap="10px">
+      <button type="submit" mat-raised-button color="primary" >Add</button>
+      <button type="submit" mat-raised-button color="alert" >Delete</button>
+      <button type="submit" mat-raised-button color="primary" >Clear</button>
+    </div>
+</section>

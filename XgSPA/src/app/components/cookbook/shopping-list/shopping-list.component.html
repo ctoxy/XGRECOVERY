@@ -3,5 +3,12 @@
     <app-shopping-edit></app-shopping-edit>
   </section>
   <mat-divider></mat-divider>
-  <p>the list</p>
+
+  <mat-list
+    role="list"
+    class="list-group-item"
+    style="cursor: pointer"
+    *ngFor="let ingredient of ingredients">
+    <mat-list-item role="listitem">{{ ingredient.name }} ({{ ingredient.amount }})</mat-list-item>
+  </mat-list>
 </div>
