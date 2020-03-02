@@ -1,0 +1,20 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "testDB",
+            "dialect": "MSSQL",
+            "isActive": true,
+            "isConnected": true,
+            "name": "DESKTOP-3D1CRAT\\MSSQLSERVER1",
+            "password": "KjteQRi0",
+            "port": 1433,
+            "server": "DESKTOP-3D1CRAT\\MSSQLSERVER1",
+            "username": "cbouve"
+        },
+        {
+            "connectString": "server=DESKTOP-3D1CRAT\\MSSQLSERVER1;database=testDB;User ID=cbouve;password=KjteQRi0",
+            "dialect": "MSSQL",
+            "name": "DESKTOP-3D1CRAT\\MSSQLSERVER1"
+        }
+    ]
+}

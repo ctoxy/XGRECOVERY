@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text;
+using System.Transactions;
 using AutoMapper;
 using Xg.API.Data;
 using Xg.API.Helpers;
@@ -45,6 +46,7 @@ namespace Xg.API
             services.AddDbContext<DataContext>(x => {
                 x.UseLazyLoadingProxies();
                 x.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
+                
             });
 
             ConfigureServices(services);

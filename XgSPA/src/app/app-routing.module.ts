@@ -7,6 +7,7 @@ import { DemoflexComponent } from './components/demo/demoflex/demoflex.component
 import { TrainingComponent } from './components/training/training/training.component';
 import { ValueComponent } from './components/value/value.component';
 import { CarteComponent } from './components/tableau/carte/carte.component';
+import { CookbookComponent } from './components/cookbook/cookbook.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'training', component: TrainingComponent },
   { path: 'demoflex', component: DemoflexComponent },
+  { path: 'cookbook', component: CookbookComponent },
   { path: 'values', component: ValueComponent },
   { path: 'carte', component: CarteComponent },
 

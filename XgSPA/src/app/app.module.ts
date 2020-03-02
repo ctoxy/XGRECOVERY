@@ -29,6 +29,13 @@ import { ValueComponent } from './components/value/value.component';
 import { MainDashComponent } from './components/tableau/main-dash/main-dash.component';
 import { CarteComponent } from './components/tableau/carte/carte.component';
 import { ValueTableComponent } from './components/tableau/value-table/value-table.component';
+import { CookbookComponent } from './components/cookbook/cookbook.component';
+import { RecipesComponent } from './components/cookbook/recipes/recipes.component';
+import { RecipesDetailComponent } from './components/cookbook/recipes/recipes-detail/recipes-detail.component';
+import { RecipesListComponent } from './components/cookbook/recipes/recipes-list/recipes-list.component';
+import { RecipeItemComponent } from './components/cookbook/recipes/recipes-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './components/cookbook/shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './components/cookbook/shopping-list/shopping-edit/shopping-edit.component';
 
 
 @NgModule({
@@ -49,6 +56,13 @@ import { ValueTableComponent } from './components/tableau/value-table/value-tabl
     MainDashComponent,
     CarteComponent,
     ValueTableComponent,
+    CookbookComponent,
+    RecipesComponent,
+    RecipesDetailComponent,
+    RecipesListComponent,
+    RecipeItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
   ],
   imports: [
     BrowserModule,
