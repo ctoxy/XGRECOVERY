@@ -2,9 +2,6 @@
   <button mat-button>New recipe</button>
 </mat-card-actions>
 
-
-
 <app-recipe-item *ngFor="let recipeEl of recipes"
-                 [recipe]="recipeEl"
-                 (recipeSelected)="onRecipeSelected(recipeEl)">
+                 [recipe]="recipeEl">
 </app-recipe-item>

@@ -6,7 +6,7 @@
   </mat-card-header>
   <button mat-raised-button  color="primary" [matMenuTriggerFor]="menu">Manage Recipe</button>
     <mat-menu #menu="matMenu">
-    <button mat-menu-item>To Shopping List</button>
+    <button mat-menu-item (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</button>
     <button mat-menu-item>Edit Recipe</button>
     <button mat-menu-item>Delete Recipe</button>
   </mat-menu>
