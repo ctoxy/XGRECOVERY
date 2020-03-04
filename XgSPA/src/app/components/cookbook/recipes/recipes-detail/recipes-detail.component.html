@@ -14,9 +14,14 @@
     <p>
       {{ recipe.description }}
     </p>
-    <p>
-      Ingredients
-    </p>
+    <ul class="list-group">
+      <li
+
+        *ngFor="let ingredient of recipe.ingredients">
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
+
   </mat-card-content>
 </mat-card>
 
