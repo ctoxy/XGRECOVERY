@@ -1,9 +1,12 @@
 <div class="recipes" fxLayout="row" fxLayout.gt-md="row"  fxLayoutGap="20px"  fxLayoutAlign="space-around none">
   <section fxFlex="40">
-    <app-recipes-list></app-recipes-list>
+    <app-recipes-list (recipeWasSelected)="selectedRecipe = $event"></app-recipes-list>
   </section>
   <section fxFlex="60">
-    <app-recipes-detail></app-recipes-detail>
+    <app-recipes-detail *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></app-recipes-detail>
+    <ng-template #infoText>
+      <p>please select a recipe</p>
+    </ng-template>
   </section>
 </div>
 

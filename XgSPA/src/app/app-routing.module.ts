@@ -8,6 +8,8 @@ import { TrainingComponent } from './components/training/training/training.compo
 import { ValueComponent } from './components/value/value.component';
 import { CarteComponent } from './components/tableau/carte/carte.component';
 import { CookbookComponent } from './components/cookbook/cookbook.component';
+import { ShoppingListComponent } from './components/cookbook/shopping-list/shopping-list.component';
+import { RecipesComponent } from './components/cookbook/recipes/recipes.component';
 
 
 
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'training', component: TrainingComponent },
   { path: 'demoflex', component: DemoflexComponent },
   { path: 'cookbook', component: CookbookComponent },
+  { path: 'shopping-list', component: ShoppingListComponent },
+  { path: 'recipes', component: RecipesComponent },
   { path: 'values', component: ValueComponent },
   { path: 'carte', component: CarteComponent },
 

@@ -22,9 +22,12 @@
       <li>
         <a routerLink="/demoflex">DemoFlex</a>
       </li>
-      <li>
-        <a routerLink="/cookbook">cookbook</a>
-      </li>
+
+      <li mat-button [matMenuTriggerFor]="menu" routerLink="/cookbook">cookbook</li>
+        <mat-menu #menu="matMenu">
+          <li mat-menu-item routerLink="/shopping-list">shopping-list</li>
+          <li mat-menu-item routerLink="/recipes">recipes</li>
+        </mat-menu>
       <li>
         <a routerLink="/values">Values</a>
       </li>

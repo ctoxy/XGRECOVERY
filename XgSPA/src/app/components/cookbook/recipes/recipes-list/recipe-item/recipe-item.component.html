@@ -1,1 +1,13 @@
-<p>recipe-item works!</p>
+<mat-card
+  class="recipes-list"
+  fxLayout="row"
+  fxLayout.gt-md="row"
+  fxLayoutGap.gt-md="20px"
+  (click)="onSelected()" >
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ recipe.name }}</mat-card-title>
+    <mat-card-subtitle>{{ recipe.description}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-avatar [src]="recipe.imagePath" alt="{{ recipe.name }}" style="max-height: 50px;">
+</mat-card>
