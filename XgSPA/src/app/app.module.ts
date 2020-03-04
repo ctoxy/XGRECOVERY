@@ -4,6 +4,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/*directive permet de styliser et adapter la vue graphique*/
+import { BasicHighlightDirective } from './_directives/styledirective/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './_directives/styledirective/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './_directives/styledirective/unless/unless.directive';
+import { DropdownDirective } from './_directives/styledirective/dropdown/dropdown.directive';
 /*librairie */
 import { FlexLayoutModule } from '@angular/flex-layout';
 /*module*/
@@ -38,8 +43,16 @@ import { ShoppingListComponent } from './components/cookbook/shopping-list/shopp
 import { ShoppingEditComponent } from './components/cookbook/shopping-list/shopping-edit/shopping-edit.component';
 
 
+
+
+
+
 @NgModule({
   declarations: [
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective,
+    DropdownDirective,
     AppComponent,
     LoginComponent,
     SignupComponent,

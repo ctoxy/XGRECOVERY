@@ -1,9 +1,10 @@
 <mat-card class="recipes-detail"  fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="20px"  >
+  <img mat-card-avatar [src]="recipe.imagePath" alt="{{ recipe.name }}" >
   <mat-card-header>
-    <img mat-card-avatar [src]="recipe.imagePath" alt="{{ recipe.name }}" >
+
     <mat-card-title> {{ recipe.name }} </mat-card-title>
   </mat-card-header>
-  <button mat-button [matMenuTriggerFor]="menu">Manage Recipe</button>
+  <button mat-raised-button  color="primary" [matMenuTriggerFor]="menu">Manage Recipe</button>
     <mat-menu #menu="matMenu">
     <button mat-menu-item>To Shopping List</button>
     <button mat-menu-item>Edit Recipe</button>
