@@ -39,8 +39,11 @@ import { RecipesComponent } from './components/cookbook/recipes/recipes.componen
 import { RecipesDetailComponent } from './components/cookbook/recipes/recipes-detail/recipes-detail.component';
 import { RecipesListComponent } from './components/cookbook/recipes/recipes-list/recipes-list.component';
 import { RecipeItemComponent } from './components/cookbook/recipes/recipes-list/recipe-item/recipe-item.component';
+import { RecipeStartComponent } from './components/cookbook/recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './components/cookbook/recipes/recipe-edit/recipe-edit.component';
 import { ShoppingListComponent } from './components/cookbook/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './components/cookbook/shopping-list/shopping-edit/shopping-edit.component';
+
 
 
 
@@ -76,6 +79,8 @@ import { ShoppingEditComponent } from './components/cookbook/shopping-list/shopp
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    RecipeStartComponent,
+    RecipeEditComponent,
   ],
   imports: [
     BrowserModule,

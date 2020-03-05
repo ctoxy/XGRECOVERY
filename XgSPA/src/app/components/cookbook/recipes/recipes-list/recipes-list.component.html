@@ -1,7 +1,7 @@
 <mat-card-actions>
-  <button mat-button>New recipe</button>
+  <button mat-button (click)="onNewRecipe()">New recipe</button>
 </mat-card-actions>
 
-<app-recipe-item *ngFor="let recipeEl of recipes"
-                 [recipe]="recipeEl">
+<app-recipe-item *ngFor="let recipeEl of recipes; let i = index"
+                 [recipe]="recipeEl" [index]="i">
 </app-recipe-item>

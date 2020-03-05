@@ -11,28 +11,28 @@
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
     <ul fxLayout fxLayoutGap="10px" class="navigation-items">
       <li>
-        <a routerLink="/signup">Signup</a>
+        <a routerLink="/signup" routerLinkActive="active">Signup</a>
       </li>
       <li>
-        <a routerLink="/login">Login</a>
+        <a routerLink="/login" routerLinkActive="active">Login</a>
       </li>
       <li>
-        <a routerLink="/training">Training</a>
+        <a routerLink="/training" routerLinkActive="active">Training</a>
       </li>
       <li>
-        <a routerLink="/demoflex">DemoFlex</a>
+        <a routerLink="/demoflex" routerLinkActive="active">DemoFlex</a>
       </li>
 
-      <li mat-button [matMenuTriggerFor]="menu" routerLink="/cookbook">cookbook</li>
+      <li mat-button [matMenuTriggerFor]="menu" routerLink="/cookbook" routerLinkActive="active">cookbook</li>
         <mat-menu #menu="matMenu">
-          <li mat-menu-item routerLink="/shopping-list">shopping-list</li>
-          <li mat-menu-item routerLink="/recipes">recipes</li>
+          <li mat-menu-item routerLink="/shopping-list" routerLinkActive="active">shopping-list</li>
+          <li mat-menu-item routerLink="/recipes" routerLinkActive="active">recipes</li>
         </mat-menu>
       <li>
-        <a routerLink="/values">Values</a>
+        <a routerLink="/values" routerLinkActive="active">Values</a>
       </li>
       <li>
-        <a routerLink="/carte">Carte</a>
+        <a routerLink="/carte" routerLinkActive="active">Carte</a>
       </li>
       <li>
         <a>Logout</a>

@@ -29,11 +29,15 @@ export class RecipeService {
   ];
 
   constructor(private slService: ShoppingListService) {}
-
+  /*retourne un tableau de toutes les recette */
   getRecipes() {
     return this.recipes.slice();
   }
-
+  /*permet l accés a la route de la recipe */
+  getRecipe(index: number) {
+    return this.recipes[index];
+  }
+  /* permet d ajouter via le service shopping service un tableau du panier */
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
   }

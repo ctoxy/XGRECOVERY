@@ -10,6 +10,9 @@ import { CarteComponent } from './components/tableau/carte/carte.component';
 import { CookbookComponent } from './components/cookbook/cookbook.component';
 import { ShoppingListComponent } from './components/cookbook/shopping-list/shopping-list.component';
 import { RecipesComponent } from './components/cookbook/recipes/recipes.component';
+import { RecipeStartComponent } from './components/cookbook/recipes/recipe-start/recipe-start.component';
+import { RecipesDetailComponent } from './components/cookbook/recipes/recipes-detail/recipes-detail.component';
+import { RecipeEditComponent } from './components/cookbook/recipes/recipe-edit/recipe-edit.component';
 
 
 
@@ -21,7 +24,12 @@ const routes: Routes = [
   { path: 'demoflex', component: DemoflexComponent },
   { path: 'cookbook', component: CookbookComponent },
   { path: 'shopping-list', component: ShoppingListComponent },
-  { path: 'recipes', component: RecipesComponent },
+  { path: 'recipes', component: RecipesComponent, children: [
+    { path: '', component: RecipeStartComponent },
+    { path: 'new', component: RecipeEditComponent },
+    { path: ':id', component: RecipesDetailComponent },
+    { path: ':id/edit', component: RecipeEditComponent },
+  ]},
   { path: 'values', component: ValueComponent },
   { path: 'carte', component: CarteComponent },
 

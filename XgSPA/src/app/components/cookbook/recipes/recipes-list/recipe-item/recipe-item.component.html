@@ -1,9 +1,10 @@
 <mat-card
-  class="recipes-list"
+  class="recipes-item"
   fxLayout="row"
   fxLayout.gt-md="row"
   fxLayoutGap.gt-md="20px"
-  (click)="onSelected()" >
+  [routerLink]="index"
+  routerLinkActive="active" >
   <mat-card-header>
     <div mat-card-avatar ></div>
     <mat-card-title>{{ recipe.name }}</mat-card-title>
