@@ -1,5 +1,5 @@
-<section >
-  <form fxLayout="row" fxLayoutGap="10px">
+<section fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+  <form >
     <mat-form-field>
       <input
         type="Name"
@@ -20,10 +20,11 @@
       <mat-hint>Please enter your amount.</mat-hint>
       <mat-error>Missing password.</mat-error>
     </mat-form-field>
-  </form>
-  <div fxLayout="row" fxLayoutGap="10px">
+    <div fxLayoutGap="10px">
       <button type="submit" mat-raised-button color="primary" (click)="onAddItem()" >Add</button>
-      <button type="submit" mat-raised-button color="alert" >Delete</button>
-      <button type="submit" mat-raised-button color="primary" >Clear</button>
-    </div>
+      <button type="submit" mat-raised-button color="warn" >Delete</button>
+      <button type="submit" mat-raised-button color="accent" >Clear</button>
+  </div>
+  </form>
+
 </section>

@@ -1,5 +1,5 @@
 <mat-card-actions>
-  <button mat-button (click)="onNewRecipe()">New recipe</button>
+  <button mat-raised-button color="primary" (click)="onNewRecipe()">New recipe</button>
 </mat-card-actions>
 
 <app-recipe-item *ngFor="let recipeEl of recipes; let i = index"
