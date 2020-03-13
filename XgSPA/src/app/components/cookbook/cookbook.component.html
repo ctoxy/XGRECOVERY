@@ -1,10 +1,8 @@
-<div>
-  <mat-card>
-    <app-recipes></app-recipes>
-  </mat-card>
-  <mat-card>
-    <app-shopping-list></app-shopping-list>
-  </mat-card>
-
+<div class="row">
+  <div class="col-md-5">
+    <app-recipe-list></app-recipe-list>
+  </div>
+  <div class="col-md-7">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-

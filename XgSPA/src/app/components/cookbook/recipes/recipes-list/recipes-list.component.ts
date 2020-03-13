@@ -14,8 +14,14 @@ export class RecipesListComponent implements OnInit {
   constructor(private recipeService: RecipeService,
               private router: Router,
               private route: ActivatedRoute) { }
-
+    /*init permet d'avoir sur recipechanged la souscription du dernier tableau*/
   ngOnInit(): void {
+    this.recipeService.recipesChanged
+      .subscribe(
+        (recipes: Recipe[]) => {
+          this.recipes = recipes;
+        }
+      );
     this.recipes = this.recipeService.getRecipes();
   }
   onNewRecipe() {

@@ -1,1 +1,106 @@
-<p>recipe-edit works!</p>
+<section>
+  <form
+    fxLayout="column"
+    fxLayoutAlign="start"
+    fxLayoutGap="10px"
+    [formGroup]="recipeForm"
+    (ngSubmit)="onSubmit()">
+    <div fxLayoutGap="20px">
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="!recipeForm.valid">
+        Save
+      </button>
+      <button
+        type="button"
+        mat-raised-button
+        color="warn"
+        (click)="onCancel()">
+        Cancel
+      </button>
+    </div>
+    <mat-form-field>
+      <mat-label for="name">Name</mat-label>
+      <input
+        type="text"
+        id="name"
+        #name
+        matInput
+        placeholder="name"
+        formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <label for="imagePath">Image URL</label>
+      <input
+        type="text"
+        id="imagePath"
+        #imagePath
+        matInput
+        formControlName="imagePath">
+    </mat-form-field>
+    <div>
+      <label for="imagePath.value">Image render</label>
+      <img [src]="imagePath.value" mat-card-avatar>
+    </div>
+    <mat-form-field>
+      <label for="description">Description</label>
+      <textarea
+        matInput
+        #description
+        type="text"
+        id="description"
+        class="form-control"
+        formControlName="description"
+        rows="6">
+      </textarea>
+    </mat-form-field>
+
+    <mat-card formArrayName="ingredients" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="10px">
+      <mat-card-content *ngFor="let ingredientCtrl of getIngredientControls(); let i = index"
+      [formGroupName]="i"
+      style="margin-top: 10px;">
+       <mat-form-field fxFlex="60">
+        <mat-label for="name">Name</mat-label>
+        <input
+          type="text"
+          id="name"
+          matInput
+          placeholder="name"
+          formControlName="name">
+        </mat-form-field>
+        <mat-form-field fxFlex="20">
+          <mat-label for="amount">amount</mat-label>
+          <input
+            type="number"
+            id="amount"
+            matInput
+            placeholder="amount"
+            formControlName="amount">
+        </mat-form-field>
+        <div fxFlex="20">
+          <button
+            type="button"
+            mat-raised-button
+            color="warn"
+            (click)="onDeleteIngredient(i)">
+            X
+          </button>
+        </div>
+
+
+      </mat-card-content>
+      <div fxFlex="100">
+        <button
+          type="button"
+          mat-raised-button
+          color="primary"
+          (click)="onAddIngredient()">
+          Add Ingredient
+        </button>
+      </div>
+
+    </mat-card>
+  </form>
+</section>

@@ -1,15 +1,15 @@
-<div fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="20px" >
-  <section fxFlex="80">
-    <app-shopping-edit >
-    </app-shopping-edit>
-  </section>
-  <mat-divider></mat-divider>
-
-  <mat-list
-    role="list"
-    class="list-group-item"
+<section fxLayout="column" fxLayoutAlign="center center"  >
+    <app-shopping-edit></app-shopping-edit>
+</section>
+<hr>
+<ul fxLayout="column" fxLayoutAlign="space-evenly start" >
+  <a
     style="cursor: pointer"
-    *ngFor="let ingredient of ingredients">
-    <mat-list-item role="listitem">{{ ingredient.name }} ({{ ingredient.amount }})</mat-list-item>
-  </mat-list>
-</div>
+    *ngFor="let ingredient of ingredients; let i = index"
+    (click)="onEditItem(i)"
+    >
+      {{ ingredient.name }} ({{ ingredient.amount }})
+    </a>
+</ul>
+
+

@@ -43,6 +43,8 @@ import { RecipeStartComponent } from './components/cookbook/recipes/recipe-start
 import { RecipeEditComponent } from './components/cookbook/recipes/recipe-edit/recipe-edit.component';
 import { ShoppingListComponent } from './components/cookbook/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './components/cookbook/shopping-list/shopping-edit/shopping-edit.component';
+import { ReactformComponent } from './components/demo/reactform/reactform.component';
+import { TdformComponent } from './components/demo/tdform/tdform.component';
 
 
 
@@ -81,6 +83,8 @@ import { ShoppingEditComponent } from './components/cookbook/shopping-list/shopp
     ShoppingEditComponent,
     RecipeStartComponent,
     RecipeEditComponent,
+    ReactformComponent,
+    TdformComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,12 @@
-<mat-card-actions>
-  <button mat-raised-button color="primary" (click)="onNewRecipe()">New recipe</button>
-</mat-card-actions>
+<div class="recipes-list" fxLayout="column" fxLayout.gt-md="column"  fxLayoutGap="20px"  fxLayoutAlign="space-around none">
+  <section fxFlex="100">
+    <button type="submit" mat-raised-button color="primary" (click)="onNewRecipe()">New Recipe</button>
+  </section>
+  <section fxFlex="100">
+    <app-recipe-item
+      *ngFor="let recipeEl of recipes; let i = index"
+      [recipe]="recipeEl" [index]="i">
+    </app-recipe-item>
+  </section>
+</div>
 
-<app-recipe-item *ngFor="let recipeEl of recipes; let i = index"
-                 [recipe]="recipeEl" [index]="i">
-</app-recipe-item>

@@ -13,6 +13,8 @@ import { RecipesComponent } from './components/cookbook/recipes/recipes.componen
 import { RecipeStartComponent } from './components/cookbook/recipes/recipe-start/recipe-start.component';
 import { RecipesDetailComponent } from './components/cookbook/recipes/recipes-detail/recipes-detail.component';
 import { RecipeEditComponent } from './components/cookbook/recipes/recipe-edit/recipe-edit.component';
+import { ReactformComponent } from './components/demo/reactform/reactform.component';
+import { TdformComponent } from './components/demo/tdform/tdform.component';
 
 
 
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'training', component: TrainingComponent },
   { path: 'demoflex', component: DemoflexComponent },
+  { path: 'reactform', component: ReactformComponent },
+  { path: 'tdform', component: TdformComponent },
   { path: 'cookbook', component: CookbookComponent },
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'recipes', component: RecipesComponent, children: [

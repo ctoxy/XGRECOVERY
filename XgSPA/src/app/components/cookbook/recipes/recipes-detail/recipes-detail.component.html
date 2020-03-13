@@ -1,27 +1,26 @@
-<mat-card class="recipes-detail"  fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="20px"  >
-  <img mat-card-avatar [src]="recipe.imagePath" alt="{{ recipe.name }}" >
-  <mat-card-header>
-
-    <mat-card-title> {{ recipe.name }} </mat-card-title>
-  </mat-card-header>
-  <button mat-raised-button  color="primary" [matMenuTriggerFor]="menu">Manage Recipe</button>
-    <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</button>
-    <button mat-menu-item (click)="onEditRecipe()">Edit Recipe</button>
-    <button mat-menu-item>Delete Recipe</button>
-  </mat-menu>
+<mat-card fxLayout="column" fxLayoutAlign="start" fxLayoutGap="10px">
   <mat-card-content>
-    <p>
-      {{ recipe.description }}
-    </p>
-    <ul class="list-group">
-      <li
-
-        *ngFor="let ingredient of recipe.ingredients">
-        {{ ingredient.name }} - {{ ingredient.amount }}
-      </li>
-    </ul>
-
+    <img
+      mat-card-avatar
+      [src]="recipe.imagePath"
+      alt="{{ recipe.name }}"
+      style="max-height: 300px;">
   </mat-card-content>
+  <mat-card-title>
+    <h1>{{ recipe.name }}</h1>
+  </mat-card-title>
+  <button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Manage Recipe <span class="caret"></span></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</button>
+    <button mat-menu-item style="cursor: pointer;" (click)="onEditRecipe()">Edit Recipe</button>
+    <button mat-menu-item style="cursor: pointer;" (click)="onDeleteRecipe()">Delete Recipe</button>
+  </mat-menu>
+  <mat-card-title>
+    <h1>{{ recipe.description }}</h1>
+  </mat-card-title>
+  <mat-card-title fxLayout="column" fxLayoutAlign="space-evenly start" >
+    <div *ngFor="let ingredient of recipe.ingredients; let i = index">
+        {{ ingredient.name }} ({{ ingredient.amount }})
+    </div>
+  </mat-card-title>
 </mat-card>
-

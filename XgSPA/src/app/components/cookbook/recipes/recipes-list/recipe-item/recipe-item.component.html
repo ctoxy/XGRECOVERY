@@ -1,14 +1,21 @@
 <mat-card
-  class="recipes-item"
-  fxLayout="row"
-  fxLayout.gt-md="row"
-  fxLayoutGap.gt-md="20px"
-  [routerLink]="index"
-  routerLinkActive="active" >
-  <mat-card-header>
-    <div mat-card-avatar ></div>
-    <mat-card-title>{{ recipe.name }}</mat-card-title>
-    <mat-card-subtitle>{{ recipe.description}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-avatar [src]="recipe.imagePath" alt="{{ recipe.name }}" style="max-height: 50px;">
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="recipe-item-card"
+  >
+  <mat-card-title>
+    {{ recipe.name }}
+  </mat-card-title>
+  <mat-card-content>
+    {{ recipe.description }}
+  </mat-card-content>
+  <span>
+    <img mat-card-avatar
+         class="image-header-recipe"
+         [src]="recipe.imagePath"
+         alt="{{ recipe.name }}"
+         style="max-height: 50px;">
+  </span>
+
 </mat-card>
